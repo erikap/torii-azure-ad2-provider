@@ -1,17 +1,20 @@
 {
   "name": "torii-azure-ad2-provider",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "A torii provider for Azure AD v2 authentication",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "torii",
+    "authentication",
+    "azure"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "erika.pauwels@gmail.com",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/erikap/torii-azure-ad2-provider",
   "scripts": {
     "build": "ember build",
     "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
