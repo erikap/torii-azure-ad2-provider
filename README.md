@@ -1,12 +1,13 @@
 torii-azure-ad2-provider
 ==============================================================================
 
-[Short description of the addon.]
+This add-on adds a `azure-ad2-oauth2` provider to your Ember application. Torii itself must be installed in the app.
 
 Installation
 ------------------------------------------------------------------------------
 
-```
+```bash
+ember install torii
 ember install torii-azure-ad2-provider
 ```
 
@@ -14,7 +15,36 @@ ember install torii-azure-ad2-provider
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+Edit `/config/environment.js` and add your Torii provider configuration:
+
+```javascript
+module.exports = function(environment) {
+  var ENV = {
+
+  // ... other ENV config stuff here
+
+   ENV['torii'] = {
+      providers: {
+        'azure-ad2-oauth2': {
+          tenantId: 'Azure app tenant ID',
+          apiKey: 'Azure app client ID',
+          redirectUri: 'http://localhost:4200/torii/redirect.html'
+        }
+      }
+    }
+
+  return ENV;
+};
+```
+
+Options that can be configured:
+
+| Option | Required | Default | Description |
+|--------|----------|---------|-------------|
+| apiKey | x | | Application ID of your app |
+| tenantId | | common | Tenant value in the path of the authorize request |
+| scope | | offline_access User.Read | A space-separated list of scopes that you want the user to consent to |
+| redirectUri | | | Redirect URI of the app for the authentication response |
 
 
 Contributing
