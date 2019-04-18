@@ -55,6 +55,12 @@ Options that can be configured:
 | redirectUri | | | Redirect URI of the app for the authentication response |
 
 
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
 License
 ------------------------------------------------------------------------------
 
