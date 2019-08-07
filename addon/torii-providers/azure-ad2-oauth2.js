@@ -13,11 +13,9 @@ export default Oauth2.extend({
     return `https://login.microsoftonline.com/${this.get('tenantId')}/oauth2/v2.0/authorize`;
   }),
 
-  init() {
-    this.set('requiredUrlParams', ['response_type', 'client_id', 'redirect_uri', 'state', 'scope']);
-    this.set('optionalUrlParams', ['response_mode', 'prompt', 'login_hint', 'domain_hint']);
-    this.set('responseParams', ['code', 'state']);
-  },
+  requiredUrlParams: Object.freeze(['response_type', 'client_id', 'redirect_uri', 'state', 'scope']),
+  optionalUrlParams: Object.freeze(['response_mode', 'prompt', 'login_hint', 'domain_hint']),
+  responseParams: Object.freeze(['code', 'state']),
 
   tenantId: configurable('tenantId', 'common'),
   scope: configurable('scope', 'offline_access User.Read'),
