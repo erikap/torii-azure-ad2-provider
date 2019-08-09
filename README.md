@@ -28,11 +28,11 @@ Edit `/config/environment.js` and add your Torii provider configuration:
 
 ```javascript
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
 
   // ... other ENV config stuff here
 
-   ENV['torii'] = {
+   torii: {
       providers: {
         'azure-ad2-oauth2': {
           tenantId: 'Azure app tenant ID',
@@ -41,6 +41,7 @@ module.exports = function(environment) {
         }
       }
     }
+  }
 
   return ENV;
 };
