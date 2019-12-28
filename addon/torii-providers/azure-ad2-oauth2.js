@@ -13,13 +13,14 @@ export default Oauth2.extend({
     return `https://login.microsoftonline.com/${this.get('tenantId')}/oauth2/v2.0/authorize`;
   }),
 
+  responseParams: Object.freeze(['code', 'state']),
+
   init() {
     this._super(...arguments);
     // Overwrite the default settings of the superclass Oauth2 provider.
     // If we don't use set, but set the property directly on the class,  Ember will merge both arrays
     this.set('requiredUrlParams', ['response_type', 'client_id', 'redirect_uri', 'state', 'scope']);
     this.set('optionalUrlParams', ['response_mode', 'prompt', 'login_hint', 'domain_hint']);
-    this.set('responseParams', ['code', 'state']);
   },
 
   tenantId: configurable('tenantId', 'common'),
