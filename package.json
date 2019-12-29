@@ -1,6 +1,6 @@
 {
   "name": "torii-azure-ad2-provider",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A torii provider for Azure AD v2 authentication",
   "keywords": [
     "ember-addon",
